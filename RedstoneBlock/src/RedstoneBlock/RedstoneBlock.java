@@ -26,6 +26,6 @@ public class RedstoneBlock extends JavaPlugin{
 	// breaking rs infused block yields original block + 1 rs
 	
 	
-	//test3
+	//test4
 }
 
