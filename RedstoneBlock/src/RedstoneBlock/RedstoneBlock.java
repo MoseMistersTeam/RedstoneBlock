@@ -24,5 +24,8 @@ public class RedstoneBlock extends JavaPlugin{
 	// but retains block texture, break time etc
 	// left-clicking with tool removes redstone inside block
 	// breaking rs infused block yields original block + 1 rs
+	
+	
+	//test
 }
 
