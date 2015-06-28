@@ -1,6 +1,9 @@
 package RedstoneBlock;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import RedstoneBlock.Listeners.Listeners;
@@ -17,6 +20,14 @@ public class RedstoneBlock extends JavaPlugin{
 	
 	public static RedstoneBlock getPlugin(){
 		return PLUGIN;
+	}
+	
+	public static ItemStack getWand(){
+		ItemStack is = new ItemStack(Material.WOOD_AXE);
+		ItemMeta im = is.getItemMeta();
+		im.setDisplayName("Redstone Infuser");
+		is.setItemMeta(im);
+		return is;
 	}
 
 	

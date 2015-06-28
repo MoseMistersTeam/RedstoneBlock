@@ -11,6 +11,7 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
+import RedstoneBlock.RedstoneBlock;
 import RedstoneBlock.API.DisguisedRedstone;
 
 public class Listeners implements Listener{
@@ -23,7 +24,7 @@ public class Listeners implements Listener{
 		if(event.getAction().equals(Action.RIGHT_CLICK_BLOCK)){
 			Player player = event.getPlayer();
 			sender.sendMessage("right click");
-			if(player.getItemInHand().getType().equals(Material.REDSTONE)){
+			if(player.getItemInHand().equals(RedstoneBlock.getWand())){
 				sender.sendMessage("redstone in hand");
 				ItemStack is = player.getItemInHand();
 				is.setAmount(is.getAmount()-1);
