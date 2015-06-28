@@ -12,7 +12,7 @@ public class RedstoneBlock extends JavaPlugin{
 	
 	public void onEnable(){
 		PLUGIN = this;
-		Bukkit.getServer().getPluginManager().registerEvents(new Listeners(), this);
+		Bukkit.getPluginManager().registerEvents(new Listeners(), this);
 	}
 	
 	public static RedstoneBlock getPlugin(){
@@ -31,5 +31,5 @@ public class RedstoneBlock extends JavaPlugin{
 	
 	
 	//test4
-	//#drunkcoding
+	
 }
