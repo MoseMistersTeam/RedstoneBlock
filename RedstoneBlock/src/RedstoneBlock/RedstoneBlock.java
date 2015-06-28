@@ -42,5 +42,14 @@ public class RedstoneBlock extends JavaPlugin{
 	
 	
 	//test4
-	
+	/* todo list
+	 * Add command for creating wand
+	 * Add chat message 'Block Infused'
+	 * Add chat message 'Redstone removed'
+	 * Add redstone mechanics
+	 * Ensure redstone is in inv. + tool is held in hand + player right click + block is valid block (from config) to infuse redstone
+	 * Ensure tool is held in hand + player left click + block contains redstone to remove redstone (if inv space, then +1 r/s to inv, if not, then drop 1 rs)
+	 * Add config for valid blocks (eg so no leaves/transparent/less than full block (Unless half-slab))
+	 * Add config for block emits light when r/s active
+	 */
 }
