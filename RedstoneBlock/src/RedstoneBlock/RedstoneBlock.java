@@ -1,6 +1,9 @@
 package RedstoneBlock;
 
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import RedstoneBlock.Listeners.Listeners;
 
 public class RedstoneBlock extends JavaPlugin{
 	//work in progress
@@ -9,6 +12,7 @@ public class RedstoneBlock extends JavaPlugin{
 	
 	public void onEnable(){
 		PLUGIN = this;
+		Bukkit.getServer().getPluginManager().registerEvents(new Listeners(), this);
 	}
 	
 	public static RedstoneBlock getPlugin(){
@@ -27,5 +31,5 @@ public class RedstoneBlock extends JavaPlugin{
 	
 	
 	//test4
-	
+	//#drunkcoding
 }
