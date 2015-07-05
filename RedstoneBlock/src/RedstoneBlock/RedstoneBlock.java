@@ -6,6 +6,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import RedstoneBlock.Listeners.Commands;
 import RedstoneBlock.Listeners.Listeners;
 
 public class RedstoneBlock extends JavaPlugin{
@@ -16,6 +17,7 @@ public class RedstoneBlock extends JavaPlugin{
 	public void onEnable(){
 		PLUGIN = this;
 		Bukkit.getPluginManager().registerEvents(new Listeners(), this);
+		this.getCommand("disguisedredstone").setExecutor(new Commands());
 	}
 	
 	public static RedstoneBlock getPlugin(){
