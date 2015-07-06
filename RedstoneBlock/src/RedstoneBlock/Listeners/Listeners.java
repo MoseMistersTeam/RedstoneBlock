@@ -1,5 +1,7 @@
 package RedstoneBlock.Listeners;
 
+import java.util.List;
+
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -30,8 +32,17 @@ public class Listeners implements Listener{
 	}
 	
 	
+	@SuppressWarnings("deprecation")
 	@EventHandler
 	public static void redstoneEvent(BlockRedstoneEvent event){
-		
+		Block redstone = event.getBlock();
+		List<DisguisedRedstone> blocks = DisguisedRedstone.getNextTo(redstone);
+		for(DisguisedRedstone block : blocks){
+			block.setPower(redstone.getBlockPower() - 1, false);
+			List<Block> redstones = block.getRedstoneNextTo();
+			for(Block redstone2 : redstones){
+				redstone2.setData((byte)(redstone.getBlockPower() - 1));
+			}
+		}
 	}
 }
