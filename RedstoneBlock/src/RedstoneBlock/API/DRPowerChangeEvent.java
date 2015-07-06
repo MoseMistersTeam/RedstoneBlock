@@ -7,15 +7,25 @@ import org.bukkit.event.HandlerList;
 public class DRPowerChangeEvent extends Event implements Cancellable{
 	
 	DisguisedRedstone REDSTONE;
+	int NEW_POWER;
 	boolean CANCELLED;
 	static final HandlerList HANDLERS = new HandlerList();
 	
-	public DRPowerChangeEvent(DisguisedRedstone redstone){
+	public DRPowerChangeEvent(DisguisedRedstone redstone, int power){
 		REDSTONE = redstone;
+		NEW_POWER = power;
 	}
 	
 	public DisguisedRedstone getRedstone(){
 		return REDSTONE;
+	}
+	
+	public int getPower(){
+		return NEW_POWER;
+	}
+	
+	public void setPower(int A){
+		NEW_POWER = A;
 	}
 	
 	@Override

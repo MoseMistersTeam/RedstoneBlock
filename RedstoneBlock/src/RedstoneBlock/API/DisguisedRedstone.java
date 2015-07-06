@@ -7,8 +7,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 
-import RedstoneBlock.RedstoneBlock;
-
 public class DisguisedRedstone {
 	
 	Block BLOCK;
@@ -44,10 +42,10 @@ public class DisguisedRedstone {
 	
 	public void setPower(int redstone, boolean event){
 		if (event){
-			DRPowerChangeEvent event2 = new DRPowerChangeEvent(this);
+			DRPowerChangeEvent event2 = new DRPowerChangeEvent(this, redstone);
 			Bukkit.getServer().getPluginManager().callEvent(event2);
 			if (!event2.isCancelled()){
-				POWER = (byte)redstone;
+				POWER = (byte)event2.getPower();
 			}
 		}else{
 			POWER = (byte)redstone;
