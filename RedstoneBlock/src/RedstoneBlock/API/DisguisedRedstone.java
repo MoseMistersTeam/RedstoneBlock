@@ -118,7 +118,7 @@ public class DisguisedRedstone {
 			for(int Y = -1; Y < 2; Y++){
 				for(int Z = -1; Z < 2; Z++){
 					Block block2 = getBlock().getRelative(X, Y, Z);
-					if (block2.getType().equals(Material.REDSTONE_BLOCK)){
+					if (block2.getType().equals(Material.REDSTONE)){
 						blocks.add(block2);
 					}
 				}
