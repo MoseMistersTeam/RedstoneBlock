@@ -9,26 +9,17 @@ import org.bukkit.block.Block;
 
 public class DisguisedRedstone {
 	
-	//these are values that stay to this class. In this case, all Disguised Redstone will have these 2 data stores as different values. You need to grab 
-	//the classes by static methods
+	
 	Block BLOCK;
 	byte POWER;
 	
-	//this keeps track of all disguised redstone that has been set, so we and others can know where they are 
+	
 	static List<DisguisedRedstone> BLOCKS = new ArrayList<DisguisedRedstone>();
 	
-	//if it only has public <X>() it is a constructor. This is one. 
-	//constructors are used to create classes. its the code that allows you to write
-	//new <classname>(); and make it actually work
-	//constructors are always found at the top of classes with the exception of abstract classes. in them they are found 2nd to the top
 	
-	//in this case you need the variables Bukkit's block, and java's Integer or Bukkit's block and java's Byte or just using Bukkit's block
 	public DisguisedRedstone(Block block, int redstone){
-		//this sets all the values for this single class, create more classes using the 'new' statement
 		BLOCK = block;
 		POWER = (byte)redstone;
-		
-		//this adds this new created class to the static list of all saved
 		BLOCKS.add(this);
 	}
 	
@@ -44,12 +35,10 @@ public class DisguisedRedstone {
 		BLOCKS.add(this);
 	}
 	
-	//returns the value of Bukkit's block for this class only
 	public Block getBlock(){
 		return BLOCK;
 	}
 	
-	//returns the value of the power of this class only
 	public byte getPower(){
 		return POWER;
 	}
